@@ -6,6 +6,7 @@ import androidx.room.Room
 import com.handroid.noteapp.feature_note.data.data_source.NoteDatabase
 import com.handroid.noteapp.feature_note.data.repository.NoteRepositoryImpl
 import com.handroid.noteapp.feature_note.domain.repository.NoteRepository
+import com.handroid.noteapp.feature_note.domain.use_cases.AddNoteUseCase
 import com.handroid.noteapp.feature_note.domain.use_cases.DeleteNoteUseCase
 import com.handroid.noteapp.feature_note.domain.use_cases.GetNotesUseCase
 import com.handroid.noteapp.feature_note.domain.use_cases.NoteUseCases
@@ -40,7 +41,8 @@ object AppModule {
     fun provideNoteUseCases(repository: NoteRepository): NoteUseCases {
         return NoteUseCases(
             getNotes = GetNotesUseCase(repository),
-            deleteNoteUseCase = DeleteNoteUseCase(repository)
+            deleteNoteUseCase = DeleteNoteUseCase(repository),
+            addNoteUseCase = AddNoteUseCase(repository)
         )
     }
 }
