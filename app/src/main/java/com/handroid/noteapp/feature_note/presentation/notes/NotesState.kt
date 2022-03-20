@@ -1,4 +1,4 @@
-package com.handroid.noteapp.feature_note.presentation.notes.components
+package com.handroid.noteapp.feature_note.presentation.notes
 
 import com.handroid.noteapp.feature_note.domain.model.Note
 import com.handroid.noteapp.feature_note.domain.util.NoteOrder
