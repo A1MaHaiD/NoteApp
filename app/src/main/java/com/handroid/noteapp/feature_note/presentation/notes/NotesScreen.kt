@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun NotesScreen(
     navController: NavController,
-    viewModel: NotesViewModel//TODO something miss =hiltViewModel()
+    viewModel: NotesViewModel //TODO something miss =hiltViewModel()
 ) {
     val state = viewModel.state.value
     val scaffoldState = rememberScaffoldState()
