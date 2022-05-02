@@ -20,6 +20,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.handroid.noteapp.feature_note.domain.model.Note
 import com.handroid.noteapp.feature_note.presentation.add_edit_note.components.TransparentHintTextField
@@ -30,7 +31,7 @@ import kotlinx.coroutines.launch
 fun AddEditNoteScreen(
     navController: NavController,
     noteColor: Int,
-    viewModel: AddEditNoteViewModel //TODO something miss =hiltViewModel()
+    viewModel: AddEditNoteViewModel = hiltViewModel()
 ) {
     val titleState = viewModel.noteTitle.value
     val contentState = viewModel.noteContent.value
